@@ -5,3 +5,4 @@ mongoose.connect(mongoConnectionString, {
   useNewUrlParser: true,
   dbName: "indices_db",
 });
+mongoose.set("debug", false);
