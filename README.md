@@ -7,7 +7,7 @@ Projeto para aprender mais sobre índices especificamente no MongoDB
 ### Setup
 
 1. Criar 1 milhão de usuários na base
-1. Criar 5 milhões de pedidos na base apenas para 3 usuários
+1. Criar 500k de pedidos na base apenas para 3 usuários
 
 ### Consultando usuário pelo nome
 

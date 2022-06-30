@@ -3,8 +3,7 @@ const uuid = require("uuid");
 
 const OrderSchema = new mongoose.Schema(
   {
-    id: { type: String, required: true, unique: true, default: uuid.v4 },
-    userId: { type: String, required: true },
+    userId: { type: mongoose.Types.ObjectId, required: true },
     purchasedAt: { type: Date, required: true },
   },
   { timestamps: true }
