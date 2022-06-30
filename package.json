@@ -1,0 +1,29 @@
+{
+  "name": "mongo-indexes",
+  "version": "1.0.0",
+  "description": "Projeto para aprender mais sobre índices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriellimoni/mongo-indexes.git"
+  },
+  "keywords": [
+    "mongodb",
+    "index"
+  ],
+  "author": "Gabriel Limoni",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabriellimoni/mongo-indexes/issues"
+  },
+  "homepage": "https://github.com/gabriellimoni/mongo-indexes#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.4.1",
+    "uuid": "^8.3.2"
+  }
+}
