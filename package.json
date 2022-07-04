@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "setup:create-users": "node ./setup/createUsers.js",
+    "setup:create-orders": "node ./setup/createOrders.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

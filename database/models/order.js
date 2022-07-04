@@ -4,6 +4,7 @@ const OrderSchema = new mongoose.Schema(
   {
     userId: { type: mongoose.Types.ObjectId, required: true },
     purchasedAt: { type: Date, required: true },
+    totalValueInCents: { type: Number, required: true },
   },
   { timestamps: true }
 );
