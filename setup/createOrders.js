@@ -26,6 +26,7 @@ const User = require("../database/models/user");
           max: new Date("2022-01-01"),
         }),
         totalValueInCents: chance.integer({ min: 100, max: 1_000_000 }),
+        paymentMethod: chance.pickone(Order.availablePaymentMethods),
       });
     }
 
