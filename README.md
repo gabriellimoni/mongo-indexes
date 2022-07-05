@@ -31,12 +31,18 @@ Projeto para aprender mais sobre índices especificamente no MongoDB
 1. Adicionar índice no ID do usuário e método de pagamento (composto)
 1. Rodar consulta novamente por um ID do usuário e método de pagamento - mostrar explain no compass
 
-### BONUS 1: Configurando índices direto no mongoose
+### BONUS 1: Full text search
+
+1. Quero filtrar usuários que contenham um termo tanto no nome quanto no email
+1. Primeira forma de fazer isso seria colocando um $or
+1. Forma mais elegante seria usando full text search
+1. Criar índice de fulltext
+1. Filtrar por "limoni"
+1. Mostrar resultado
+1. Mostrar explain
+
+### BONUS 2: Configurando índices direto no mongoose
 
 1. Índice no nome do usuário
 1. Índice na data do pedido
-1. Índice composto - data do pedido + valor do pedido
-
-### BONUS 2: Full text search
-
-// TODO...
+1. Índice composto - ID do usuário + método de pagamento
