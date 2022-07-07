@@ -62,28 +62,43 @@ Você pode replicar essa base, confira como na Seção [Reproduzindo a base de d
 ### Consultando usuário pelo nome
 
 1. Rodar uma consulta pelo nome do usuário - mostrar explain no compass
+
    ![Consulta nome usuário sem índice](img/1.1-consulta-nome-sem-indice.png)
+
 1. Adicionar índice no nome do usuário
+
    ![Adiciona índice no nome do usuário](img/1.2-cria-indice-nome.png)
+
 1. Rodar consulta novamente pelo nome do usuário - mostrar explain no compass
+
    ![Consulta nome usuário com índice](img/1.3-consulta-nome-com-indice.png)
 
 ### Consultando pedido pelo range de data
 
 1. Rodar uma consulta por um range de data - mostrar explain no compass
+
    ![Consulta range de compra sem índice](img/2.1-consulta-pedido-range-sem-indice.png)
+
 1. Adicionar índice na data de compra do pedido
+
    ![Adiciona índice no range de data](img/2.2-cria-indice-data.png)
+
 1. Rodar consulta novamente por um range de data - mostrar explain no compass
+
    ![Consulta range de compra com índice](img/2.3-consulta-pedido-range-com-indice.png)
 
 ### Consultando pedido pelo ID do usuário e método de pagamento (composto)
 
 1. Rodar uma consulta por um ID do usuário e método de pagamento - mostrar explain no compass
+
    ![Consulta ID e método de pagamento sem índice](img/3.1-consulta-composto-sem-indice.png)
+
 1. Adicionar índice no ID do usuário e método de pagamento (composto)
+
    ![Adiciona índice composto ID + método de pagamento](img/3.2-cria-indice-composto.png)
+
 1. Rodar consulta novamente por um ID do usuário e método de pagamento - mostrar explain no compass
+
    ![Consulta ID e método de pagamento com índice](img/3.3-consulta-composto-com-indice.png)
 
 ### BONUS 1: Text search
@@ -91,10 +106,15 @@ Você pode replicar essa base, confira como na Seção [Reproduzindo a base de d
 Quero filtrar usuários que contenham um termo tanto no nome quanto no email. Forma mais simples de fazer isso seria colocando um [$or](https://www.mongodb.com/docs/manual/reference/operator/query/or/). Forma mais elegante seria usando [text search](https://www.mongodb.com/docs/manual/text-search/).
 
 1. Criar índice de fulltext
+
    ![Cria índice full text](img/4.2-cria-indice-full-text.png)
+
 1. Filtrar por "limoni"
+
    ![Filtra com text search](img/4.3-consulta-full-text-com-indice.png)
+
 1. Explain da consulta
+
    ![Explain full text search](img/4.4-consulta-full-text-explain.png)
 
 ### BONUS 2: Configurando índices direto no mongoose
