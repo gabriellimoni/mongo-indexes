@@ -6,7 +6,7 @@ Projeto para documentar a apresentação sobre índices no Mongo na [Liven](http
 
 ### SGBD
 
-SGBD (Sistema Gerenciador de Banco de Dados), é um software que gerencia um ou mais banco de dados. Ele é responsável por abstrair do cliente as responsabilidades como acesso, persistência, manipulação e organização dos dados. Todo SGBD possui uma interface para facilitar a manipulação e gerenciamento dos dados.
+SGBD (Sistema Gerenciador de Banco de Dados), é um software que gerencia um ou mais bancos de dados. Ele é responsável por abstrair do cliente as responsabilidades como acesso, persistência, manipulação e organização dos dados. Todo SGBD possui uma interface para facilitar a manipulação e gerenciamento dos dados.
 
 ![SGBD](img/intro/1-SGBD.jpg)
 
@@ -14,7 +14,7 @@ SGBD (Sistema Gerenciador de Banco de Dados), é um software que gerencia um ou 
 
 Diferentemente dos SGBDs relacionais (MySQL, Postgres, etc), o Mongo é um banco não relacional orientado a documentos. Traçando um paralelo didático superficial, cada tabela no relacional seria uma coleção no Mongo e cada linha, um documento.
 
-O Mongo possui um DBaaS (Database as a Service) denominado [Atlas](https://www.mongodb.com/atlas/database). Com ele, podemos construir desde clusters compartilhados gratuítos, até clusters dedicados.
+O Mongo possui um DBaaS (Database as a Service) denominado [Atlas](https://www.mongodb.com/atlas/database). Com ele, podemos construir desde clusters compartilhados gratuítos até clusters dedicados pagos.
 
 ![MongoDB](img/intro/2-mongo.jpeg)
 
@@ -26,11 +26,28 @@ A analogia clássica são índices de livros. Se você deseja ler apenas um cap�
 
 ![Exemplo índice](img/intro/3-exemplo-indice.jpeg)
 
-[Esse link](http://www.bosontreinamentos.com.br/bancos-de-dados/o-que-sao-indices-em-bancos-de-dados-indexacao-em-tabelas/) tem informações mais detalhadas, explicando um pouco algumas estruturas, como Árvore-B, Bitmap, Hashing, entre outros.
+[Esse link](http://www.bosontreinamentos.com.br/bancos-de-dados/o-que-sao-indices-em-bancos-de-dados-indexacao-em-tabelas/) apresenta informações mais detalhadas, explicando um pouco algumas estruturas de índices, como Árvore-B, Bitmap, Hashing, entre outros.
 
-### Prós e contras
+### Tradeoffs
 
-// TODO
+Apesar de poder otimizar bastante as consultas na base de dados, é preciso cautela e uma análise prévia antes de criar índices para todas as propriedades, a fim de evitar que sejam usados da melhor maneira.
+
+#### Prós
+
+- Otimização de consultas em muitos casos
+- Acesso a dados ordenados rapidamente
+- Facilidade em garantir unicidade de valores
+
+#### Contras
+
+- Piora a performance de escrita dos dados
+- Aumenta o consumo de espaço de armazenamento
+- Aumenta a necessidade de manutenção na base
+- Se aplicado erroneamente, pode diminuir a performance das consultas
+
+[Essa resposta no Stackoverflow](https://pt.stackoverflow.com/a/35096) apresenta mais detalhes sobre cada pró e contra e informações para dissernir corretamente o uso de índices.
+
+![Tradeoffs](img/intro/4-tradeoffs.png)
 
 ---
 
@@ -82,3 +99,4 @@ A analogia clássica são índices de livros. Se você deseja ler apenas um cap�
 - [Índice](http://www.bosontreinamentos.com.br/bancos-de-dados/o-que-sao-indices-em-bancos-de-dados-indexacao-em-tabelas/)
 - [MongoDB](https://tecnoblog.net/responde/o-que-e-e-para-que-serve-o-mongodb/)
 - [Mongoose](https://mongoosejs.com/)
+- [Prós e contras](https://pt.stackoverflow.com/a/35096)
